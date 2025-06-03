@@ -34,17 +34,26 @@
         </div>
     </header>
     <div class="intro-hero-wrap">
-      <div class="intro-subtitle">STRATEGIC BRANDING & CREATIVE CONSULTANT</div>
-      <div class="intro-title">SHANNON Y.</div>
-      <div class="intro-photo-wrapper">
-        <img src="assets/images/shannon_y.jpg" alt="Shannon Y." class="intro-photo" loading="lazy">
+      <div id="hero-content">
+        <div class="intro-subtitle">STRATEGIC BRANDING & CREATIVE CONSULTANT</div>
+        <div class="intro-title">SHANNON Y.</div>
+        <div class="intro-photo-wrapper">
+          <img src="assets/images/shannon_y.jpg" alt="Shannon Y." class="intro-photo" loading="lazy">
+        </div>
       </div>
       <div class="intro-btn-group">
-        <button class="intro-btn">WHO AM I</button>
+        <button class="intro-btn" onclick="showWhoAmI()">WHO AM I</button>
         <button class="intro-btn">SKILLS I HAVE</button>
         <button class="intro-btn">MY WORKS</button>
         <button class="intro-btn">CAREER HISTORY</button>
         <button class="intro-btn">EDUCATIONAL BACKGROUND</button>
+      </div>
+      <div id="whoami-content" style="display:none;">
+        Strategic Branding & Creative Consultant with nearly 10 years of experience in branded business and startups. Earned a Master’s degree in Brand Management & Communication in Milan, Italy.<br>
+        Project experience in diverse sectors, including art merchandise, hospitality & commercial real estate, fashion, new dining, consumer goods, luxury, beauty products, art IPs, entertainment, Web3/NFT and AIGC products.<br>
+        Proven track record in driving business branding, brand localization, product IP development, rebranding, brand visual optimization, brand partnership marketing and service value packaging.<br>
+        Experienced in collaborating with multicultural teams across Toronto, Milan, New York, Shanghai and Taipei.<br>
+        Passionate about building differentiated brand ecosystems that break market barriers and drive business growth through strategic brand thinking.
       </div>
     </div>
     <main class="main-content">
@@ -59,5 +68,6 @@
     </footer>
     <script src="js/theme-switcher.js?v=1.0.6" defer></script>
     <script src="js/navigation.js?v=1.0.3" defer></script>
+    <script src="js/intro-interactive.js"></script>
 </body>
 </html>
