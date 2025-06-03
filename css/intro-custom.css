@@ -1,5 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=DIN+Condensed:wght@700&display=swap');
 
+#whoami-content {
+  padding-left: clamp(2rem, 14vw, 8rem);
+  padding-right: clamp(2rem, 14vw, 8rem);
+  max-width: 700px;
+  margin: 2.5rem auto 0 auto;
+  text-align: center;
+}
+
+
 .intro-btn-group {
   display: flex;
   flex-wrap: wrap;
