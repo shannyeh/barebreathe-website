@@ -82,8 +82,10 @@
 }
 .cinematic-btn:hover, .cinematic-btn:focus {
   background: rgba(230,236,255,0.18);
-  color: #173d7c;
-  transform: scale(1.04);
+  background: rgba(255,255,255,0.13);
+  color: #1a355a;
+  transform: scale(1.06);
+  box-shadow: 0 2px 18px 0 rgba(120,160,255,0.11);
 }
 .dark-mode .cinematic-btn, .dark-theme .cinematic-btn {
   background: transparent;
@@ -91,45 +93,11 @@
 }
 .dark-mode .cinematic-btn:hover, .dark-theme .cinematic-btn:hover,
 .dark-mode .cinematic-btn:focus, .dark-theme .cinematic-btn:focus {
-  background: rgba(40,48,80,0.18);
+  background: rgba(80,120,255,0.09);
   color: #a4d1ff;
+  transform: scale(1.06);
+  box-shadow: 0 2px 18px 0 rgba(80,120,255,0.13);
   border: none !important;
-  box-shadow: none !important;
-}
-.cinematic-btn:hover, .cinematic-btn:focus {
-  background: #e6ecfa;
-  color: #173d7c;
-  box-shadow: none;
-  transform: scale(1.045);
-}
-.dark-mode .cinematic-btn, .dark-theme .cinematic-btn {
-  background: transparent;
-  color: #f6f6f6;
-  border: none !important;
-  box-shadow: none !important;
-}
-.dark-mode .cinematic-btn:hover, .dark-theme .cinematic-btn:hover,
-.dark-mode .cinematic-btn:focus, .dark-theme .cinematic-btn:focus {
-  background: #23273a;
-  color: #a4d1ff;
-  box-shadow: 0 3px 18px 0 rgba(120,160,255,0.13);
-}
-
-.cinematic-btn:hover, .cinematic-btn:focus {
-  background: rgba(255,255,255,0.90);
-  color: #111;
-  box-shadow: 0 4px 24px 0 rgba(0,0,0,0.10);
-}
-.dark-mode .cinematic-btn, .dark-theme .cinematic-btn {
-  background: transparent;
-  color: #f6f6f6;
-  border: none !important;
-  box-shadow: none !important;
-}
-.dark-mode .cinematic-btn:hover, .dark-theme .cinematic-btn:hover,
-.dark-mode .cinematic-btn:focus, .dark-theme .cinematic-btn:focus {
-  background: rgba(22,22,22,0.96);
-  color: #fff;
 }
 .cinematic-btn.skip-btn {
   background: rgba(255,0,0,0.07);
