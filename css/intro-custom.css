@@ -1,12 +1,76 @@
 @import url('https://fonts.googleapis.com/css2?family=DIN+Condensed:wght@700&display=swap');
 
+.intro-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1.2rem 1.6rem;
+  margin-top: 2.3rem;
+  margin-bottom: 1.7rem;
+}
+
+.intro-btn {
+  font-family: 'DIN Next Condensed', 'DIN Condensed', Arial, sans-serif;
+  font-weight: 700;
+  font-size: 1.18rem;
+  padding: 0.7em 2.2em;
+  border: none;
+  border-radius: 0;
+  background: transparent;
+  color: #1a355a;
+  letter-spacing: 0.09em;
+  border: none;
+  box-shadow: none;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s, transform 0.18s;
+  outline: none;
+}
+
+.intro-btn:hover, .intro-btn:focus {
+  background: transparent;
+  color: #484848;
+  padding: 0.7em 2.2em;
+  box-shadow: none;
+  transform: none;
+}
+
+.dark-mode .intro-btn, .dark-theme .intro-btn {
+  background: #232a36;
+  color: #a4d1ff;
+}
+
+.dark-mode .intro-btn:hover, .dark-theme .intro-btn:hover,
+.dark-mode .intro-btn:focus, .dark-theme .intro-btn:focus {
+  background: transparent;
+  color: #b7b7b7;
+}
+
+
 .intro-hero-wrap {
   position: relative;
   display: flex;
   flex-direction: column;
   align-items: center;
   min-height: 16vw;
+  padding-top: 7rem;
 }
+
+.intro-subtitle {
+  font-family: 'DIN Next Condensed', 'DIN Condensed', Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(0.95rem, 2.8vw, 1.45rem);
+  text-align: center;
+  letter-spacing: 0.11em;
+  color: #222;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+
+.dark-mode .intro-subtitle,
+.dark-theme .intro-subtitle {
+  color: #e4e4e4;
+}
+
 
 .intro-title {
   font-family: 'DIN Next Condensed', 'DIN Condensed', Arial, sans-serif;
@@ -15,7 +79,7 @@
   font-stretch: condensed;
   text-align: center;
   letter-spacing: -0.03em;
-  margin-top: clamp(5rem, 12vw, 8rem);
+  margin-top: 0;
   margin-bottom: 0;
   line-height: 1.03;
   color: #111;
