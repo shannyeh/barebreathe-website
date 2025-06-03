@@ -10,9 +10,9 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  pointer-events: none;
   font-family: 'Albertus Nova', serif;
   background: none;
+  pointer-events: none;
 }
 .cinematic-line {
   color: #181818;
@@ -59,6 +59,7 @@
   align-items: center;
   gap: 1.2em;
   margin-top: 2.1em;
+  pointer-events: auto;
 }
 .cinematic-btn {
   font-family: 'Albertus Nova', serif;
@@ -81,11 +82,7 @@
   position: relative;
 }
 .cinematic-btn:hover, .cinematic-btn:focus {
-  background: rgba(230,236,255,0.18);
-  background: rgba(255,255,255,0.13);
-  color: #1a355a;
-  transform: scale(1.06);
-  box-shadow: 0 2px 18px 0 rgba(120,160,255,0.11);
+  text-decoration: underline;
 }
 .dark-mode .cinematic-btn, .dark-theme .cinematic-btn {
   background: transparent;
@@ -93,11 +90,7 @@
 }
 .dark-mode .cinematic-btn:hover, .dark-theme .cinematic-btn:hover,
 .dark-mode .cinematic-btn:focus, .dark-theme .cinematic-btn:focus {
-  background: rgba(80,120,255,0.09);
-  color: #a4d1ff;
-  transform: scale(1.06);
-  box-shadow: 0 2px 18px 0 rgba(80,120,255,0.13);
-  border: none !important;
+  text-decoration: underline;
 }
 .cinematic-btn.skip-btn {
   background: rgba(255,0,0,0.07);
