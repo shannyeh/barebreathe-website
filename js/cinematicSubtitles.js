@@ -1,11 +1,7 @@
 // cinematicSubtitles.js
 // 動態電影字幕跑馬燈效果
 
-const cinematicLines = [
-  "Somewhere beyond the noise, there’s a place where ideas float like stars.",
-  "At barebreathe, every breath sparks a new constellation.",
-  "Come find yours."
-];
+const cinematicLines = [];
 
 let cinematicSubtitleActive = false;
 
@@ -31,99 +27,39 @@ function showCinematicSubtitles() {
   subtitleContainer.style.display = 'flex';
   subtitleContainer.classList.remove('fade-out');
 
-  // 建立按鈕區域
+  // 建立按鈕區域（垂直排列）
   let btnGroup = document.createElement('div');
   btnGroup.className = 'cinematic-btn-group';
+  btnGroup.style.flexDirection = 'column'; // 垂直排列
+  btnGroup.style.gap = '1.2em';
   subtitleContainer.appendChild(btnGroup);
-  // 下一條按鈕
-  let nextBtn = document.createElement('button');
-  nextBtn.type = 'button';
-  nextBtn.className = 'cinematic-btn next-btn';
-  nextBtn.textContent = 'Next';
-  btnGroup.appendChild(nextBtn);
-  // Skip 按鈕
-  let skipBtn = document.createElement('button');
-  skipBtn.type = 'button';
-  skipBtn.className = 'cinematic-btn skip-btn';
-  skipBtn.textContent = 'Skip';
-  btnGroup.appendChild(skipBtn);
 
-  // 重新綁定確保事件生效
-  nextBtn.onclick = function(e) {
-    e.preventDefault();
-    appendLine();
-  };
-  skipBtn.onclick = function(e) {
-    e.preventDefault();
-    isSkipping = true;
-    endSubtitles();
-  };
+  // About Me 按鈕
+  let aboutBtn = document.createElement('button');
+  aboutBtn.type = 'button';
+  aboutBtn.className = 'cinematic-btn about-btn';
+  aboutBtn.textContent = 'About Me';
+  btnGroup.appendChild(aboutBtn);
 
-  let lineIdx = 0;
-  let isSkipping = false;
+  // Portfolio 按鈕
+  let portfolioBtn = document.createElement('button');
+  portfolioBtn.type = 'button';
+  portfolioBtn.className = 'cinematic-btn portfolio-btn';
+  portfolioBtn.textContent = 'Portfolio';
+  btnGroup.appendChild(portfolioBtn);
 
-  function endSubtitles() {
-    subtitleContainer.classList.add('fade-out');
-    setTimeout(() => {
-      subtitleContainer.style.display = 'none';
-      cinematicSubtitleActive = false;
-    }, 800);
-  }
+  // My Playground 按鈕
+  let playgroundBtn = document.createElement('button');
+  playgroundBtn.type = 'button';
+  playgroundBtn.className = 'cinematic-btn playground-btn';
+  playgroundBtn.textContent = 'My Playground';
+  btnGroup.appendChild(playgroundBtn);
 
-  function appendLine() {
-    if (isSkipping) return;
-    if (lineIdx >= cinematicLines.length) {
-      endSubtitles();
-      return;
-    }
-    const line = cinematicLines[lineIdx];
-    const lineElem = document.createElement('div');
-    lineElem.className = 'cinematic-line';
-    lineElem.textContent = line;
-    lineElem.style.opacity = '0';
-    subtitleContainer.insertBefore(lineElem, btnGroup);
-    setTimeout(() => {
-      lineElem.style.opacity = '1';
-      lineElem.classList.add('line-finished');
-    }, 40);
-    lineIdx++;
-    // 控制 Next 按鈕狀態
-    if (lineIdx >= cinematicLines.length) {
-      nextBtn.style.display = 'none';
-    }
-  }
+  // 預留事件綁定（可於未來添加）
+  // aboutBtn.onclick = ...
+  // portfolioBtn.onclick = ...
+  // playgroundBtn.onclick = ...
 
-  // 下一條按鈕事件
-  nextBtn.onclick = function(e) {
-    e.preventDefault();
-    appendLine();
-  };
-  // Skip 按鈕事件
-  skipBtn.onclick = function(e) {
-    e.preventDefault();
-    isSkipping = true;
-    endSubtitles();
-  };
-
-  // 支援 ESC 跳過字幕
-  window._cinematicSubtitleEscHandler = function(e) {
-    if (e.key === 'Escape') {
-      isSkipping = true;
-      endSubtitles();
-    }
-  };
-  window.addEventListener('keydown', window._cinematicSubtitleEscHandler);
-
-  // 清理事件（字幕結束時）
-  subtitleContainer.addEventListener('transitionend', function cleanup() {
-    if (subtitleContainer.style.display === 'none') {
-      window.removeEventListener('keydown', window._cinematicSubtitleEscHandler);
-      subtitleContainer.removeEventListener('transitionend', cleanup);
-    }
-  });
-
-  // 初始第一句
-  appendLine();
 }
 
 // 事件綁定
