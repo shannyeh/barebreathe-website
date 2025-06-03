@@ -1,0 +1,18 @@
+@import url('https://fonts.googleapis.com/css2?family=DIN+Condensed:wght@700&display=swap');
+
+.intro-title {
+  font-family: 'DIN Next Condensed', 'DIN Condensed', Arial, sans-serif;
+  font-weight: 700;
+  font-size: clamp(3rem, 10vw, 7rem);
+  text-align: center;
+  letter-spacing: 0.04em;
+  margin-top: 3.5rem;
+  margin-bottom: 2.5rem;
+  line-height: 1.05;
+  color: #111;
+}
+
+.dark-mode .intro-title,
+.dark-theme .intro-title {
+  color: #fff;
+}
