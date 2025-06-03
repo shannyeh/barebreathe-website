@@ -1,18 +1,69 @@
 @import url('https://fonts.googleapis.com/css2?family=DIN+Condensed:wght@700&display=swap');
 
+.intro-hero-wrap {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 16vw;
+}
+
 .intro-title {
   font-family: 'DIN Next Condensed', 'DIN Condensed', Arial, sans-serif;
-  font-weight: 700;
-  font-size: clamp(3rem, 10vw, 7rem);
+  font-weight: 900;
+  font-size: clamp(6rem, 20vw, 14rem);
+  font-stretch: condensed;
   text-align: center;
-  letter-spacing: 0.04em;
-  margin-top: 3.5rem;
-  margin-bottom: 2.5rem;
-  line-height: 1.05;
+  letter-spacing: -0.03em;
+  margin-top: clamp(5rem, 12vw, 8rem);
+  margin-bottom: 0;
+  line-height: 1.03;
   color: #111;
+  font-variation-settings: 'wght' 900;
+}
+
+
+.intro-photo-wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  margin-bottom: 1.2rem;
+}
+
+@media (max-width: 600px) {
+  .intro-title {
+    margin-top: clamp(6rem, 18vw, 10rem);
+  }
 }
 
 .dark-mode .intro-title,
 .dark-theme .intro-title {
   color: #fff;
+}
+
+.intro-photo-wrapper {
+  display: flex;
+  justify-content: center;
+  margin-top: -7.5rem;
+  margin-bottom: 1.2rem;
+  position: relative;
+  z-index: 2;
+}
+
+.intro-photo {
+  width: clamp(180px, 32vw, 320px);
+  max-width: 90vw;
+  box-shadow: 0 6px 32px 0 rgba(60,60,80,0.13);
+  object-fit: cover;
+  background: #fff;
+  position: relative;
+  z-index: 3;
+}
+
+@media (max-width: 600px) {
+  .intro-photo-wrapper {
+    margin-top: -2.2rem;
+    margin-bottom: 1.5rem;
+  }
 }
