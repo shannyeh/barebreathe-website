@@ -8,6 +8,18 @@
   text-align: center;
 }
 
+#whoami-content strong,
+#whoami-content b {
+  font-weight: 700 !important;
+}
+
+.dark-mode #whoami-content strong,
+.dark-theme #whoami-content strong,
+.dark-mode #whoami-content b,
+.dark-theme #whoami-content b {
+  font-weight: 700 !important;
+}
+
 
 .intro-btn-group {
   display: flex;
