@@ -44,11 +44,11 @@
           </div>
         </div>
         <div class="intro-btn-group">
-          <button class="intro-btn" onclick="showWhoAmI()">WHO AM I</button>
-          <button class="intro-btn">SKILLS I HAVE</button>
-          <button class="intro-btn">MY WORKS</button>
-          <button class="intro-btn">CAREER HISTORY</button>
-          <button class="intro-btn">EDUCATIONAL BACKGROUND</button>
+          <button class="intro-btn" onclick="showContent('whoami-content', this)">WHO AM I</button>
+          <button class="intro-btn" onclick="showContent('skills-content', this)">SKILLS I HAVE</button>
+          <button class="intro-btn" onclick="showContent('myworks-content', this)">MY WORKS</button>
+          <button class="intro-btn" onclick="showContent('career-history-content', this)">CAREER HISTORY</button>
+          <button class="intro-btn" onclick="showContent('educational-background-content', this)">EDUCATIONAL BACKGROUND</button>
         </div>
         <div id="whoami-content" style="display:none; width:100%;">
           <div class="whoami-list">
@@ -71,6 +71,22 @@
               <p>Passionate about building differentiated brand ecosystems that break market barriers and drive business growth through strategic brand thinking.</p>
             </div>
           </div>
+        </div>
+        <!-- Placeholder for SKILLS I HAVE content -->
+        <div id="skills-content" style="display:none; width:100%;">
+          <p style="text-align:center; padding: 2rem;">SKILLS I HAVE - Content coming soon...</p>
+        </div>
+        <!-- Placeholder for MY WORKS content -->
+        <div id="myworks-content" style="display:none; width:100%;">
+          <p style="text-align:center; padding: 2rem;">MY WORKS - Content coming soon...</p>
+        </div>
+        <!-- Placeholder for CAREER HISTORY content -->
+        <div id="career-history-content" style="display:none; width:100%;">
+          <p style="text-align:center; padding: 2rem;">CAREER HISTORY - Content coming soon...</p>
+        </div>
+        <!-- Placeholder for EDUCATIONAL BACKGROUND content -->
+        <div id="educational-background-content" style="display:none; width:100%;">
+          <p style="text-align:center; padding: 2rem;">EDUCATIONAL BACKGROUND - Content coming soon...</p>
         </div>
       </div>
     </div>
