@@ -44,7 +44,7 @@ function showCinematicSubtitles() {
   aboutBtn.textContent = 'About';
   aboutBtn.onclick = function() { 
     console.log('About clicked');
-    window.location.href = 'intro/'; 
+    window.location.href = 'intro.html'; 
   };
   btnGroup.appendChild(aboutBtn);
 
