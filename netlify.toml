@@ -1,0 +1,11 @@
+[build]
+  publish = "."
+  command = ""
+
+[dev]
+  port = 5002
+
+[[redirects]]
+  from = "/pdf-viewer.html"
+  to = "/pdf-viewer.html"
+  status = 200
