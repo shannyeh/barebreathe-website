@@ -1,15 +1,34 @@
 @import url('https://fonts.googleapis.com/css2?family=DIN+Condensed:wght@700&display=swap');
 
-#whoami-content {
-  padding-left: clamp(0.05rem, 0.5vw, 0.3rem);
-  padding-right: clamp(0.05rem, 0.5vw, 0.3rem);
-  max-width: 1250px;
-  margin: 2.5rem auto 0 auto;
-  text-align: center;
+#whoami-content,
+#skills-content,
+#career-history-content,
+#educational-background-content {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.8rem;
+  padding-bottom: 1.3rem;
+  max-width: 1100px;
+  margin: 1.1rem auto 0.5rem auto;
+  text-align: left;
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
+  align-items: stretch;
+  justify-content: flex-start;
+}
+
+@media (max-width: 700px) {
+  #whoami-content,
+  #skills-content,
+  #career-history-content,
+  #educational-background-content {
+    padding-left: 0.2rem;
+    padding-right: 0.2rem;
+    padding-top: 0.5rem;
+    padding-bottom: 0.7rem;
+    max-width: 98vw;
+    margin: 0.5rem auto 0.2rem auto;
+  }
 }
 
 
@@ -121,6 +140,20 @@
   gap: 1.2rem 1.6rem;
   margin-top: 2.3rem;
   margin-bottom: 1.7rem;
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 20;
+  padding-bottom: 1.2rem;
+}
+
+@media (max-width: 700px) {
+  .intro-btn-group {
+    position: static;
+    padding-bottom: 0.7rem;
+  }
 }
 
 .intro-btn {
@@ -161,6 +194,13 @@
   color: #b7b7b7;
 }
 
+
+.intro-main-layout {
+  position: relative;
+  height: 100vh;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
+}
 
 .intro-hero-wrap {
   position: relative;
