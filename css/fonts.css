@@ -33,6 +33,6 @@
 
 /* 用於內文和小字的 Calibri 字體 */
 .calibri-text {
-    font-family: 'Calibri', 'Arial', sans-serif;
+    font-family: 'Calibri', 'Calibri', sans-serif;
     letter-spacing: 0.2em; /* 字母間距 200 */
 }
