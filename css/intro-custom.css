@@ -31,7 +31,7 @@
   box-shadow: none;
   padding: 1.2rem 0.6rem 0.9rem 0.6rem;
   text-align: left;
-  font-family: 'DIN Next Condensed', 'DIN Condensed', Calibri, sans-serif;
+  font-family: 'DIN Condensed', 'DIN Condensed', serif, serif;
   font-size: 0.95rem;
   line-height: 1.65;
   color: #232323;
@@ -124,7 +124,7 @@
 }
 
 .intro-btn {
-  font-family: 'DIN Next Condensed', 'DIN Condensed', Calibri, sans-serif;
+  font-family: 'DIN Condensed', 'DIN Condensed', Calibri, sans-serif;
   font-size: 1.08rem;
   font-weight: 700;
   color: #21314d;
@@ -172,7 +172,7 @@
 }
 
 .intro-subtitle {
-  font-family: 'DIN Next Condensed', 'DIN Condensed', Calibri, sans-serif;
+  font-family: 'DIN Condensed', 'DIN Condensed', serif, serif;
   font-weight: 700;
   font-size: clamp(0.95rem, 2.8vw, 1.45rem);
   text-align: center;
@@ -189,7 +189,7 @@
 
 
 .intro-title {
-  font-family: 'DIN Next Condensed', 'DIN Condensed', Calibri, sans-serif;
+  font-family: 'DIN Condensed', 'DIN Condensed', Calibri, sans-serif;
   font-weight: 900;
   font-size: clamp(6rem, 20vw, 14rem);
   font-stretch: condensed;
