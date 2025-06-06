@@ -199,5 +199,21 @@
     <script src="js/theme-switcher.js?v=1.0.6" defer></script>
     <script src="js/navigation.js?v=1.0.3" defer></script>
     <script src="js/intro-interactive.js"></script>
+<script>
+// Disable right-click context menu and block download shortcuts
+window.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+window.addEventListener('keydown', function(e) {
+  // Block Ctrl+S, Ctrl+U, Ctrl+Shift+I, F12, Ctrl+P
+  if ((e.ctrlKey && (e.key === 's' || e.key === 'u' || e.key === 'p')) ||
+      (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+      e.key === 'F12') {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+});
+</script>
 </body>
 </html>

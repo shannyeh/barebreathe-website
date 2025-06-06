@@ -4,6 +4,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     // 對應新六大分類
     const sectionIds = [
+        'section-advertising',
         'section-tech',
         'section-merchandise',
         'section-newdining',
