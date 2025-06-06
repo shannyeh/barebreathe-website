@@ -1,0 +1,51 @@
+.img-hover-note {
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  max-width: 700px;
+}
+
+.img-hover-note-msg {
+  display: none;
+  position: absolute;
+  left: 50%;
+  top: 100%;
+  transform: translateX(-50%);
+  background: rgba(255,255,255,0.97);
+  color: #444;
+  font-size: 0.97em;
+  margin-top: 0.5em;
+  padding: 0.7em 1.1em;
+  border-radius: 8px;
+  box-shadow: 0 2px 12px #bbb;
+  z-index: 10;
+  min-width: 270px;
+  max-width: 97vw;
+  align-items: center;
+  gap: 0.4em;
+  pointer-events: none;
+}
+
+.img-hover-note:hover .img-hover-note-msg,
+.img-hover-note:focus-within .img-hover-note-msg {
+  display: flex;
+  pointer-events: auto;
+}
+
+.img-hover-note:hover .img-hover-note-msg,
+.img-hover-note:focus-within .img-hover-note-msg {
+  display: flex;
+  pointer-events: auto;
+}
+
+.img-hover-note-email {
+  color: #2a5db0;
+  text-decoration: underline;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.2em;
+}
+
+.img-hover-note img {
+  cursor: pointer;
+}
