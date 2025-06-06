@@ -44,7 +44,7 @@ html {
     height: 100vh;
     width: 100vw;
     scroll-behavior: smooth;
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 
 
@@ -55,7 +55,7 @@ body {
     line-height: 1.6;
     margin: 0;
     padding: 0;
-    overflow: hidden;
+    /* overflow: hidden; */
     transition: background-color 0.5s ease, color 0.5s ease;
     cursor: var(--cursor-default);
     letter-spacing: 0.2em; /* 字母間距 200 */
