@@ -192,5 +192,21 @@
     <script src="js/volumePrompt.js?v=1.0.0" defer></script>
 <script src="js/cinematicSubtitles.js?v=1.0.0" defer></script>
 <script src="dropdown-close.js"></script>
+<script>
+// Disable right-click context menu and block download shortcuts
+window.addEventListener('contextmenu', function(e) {
+  e.preventDefault();
+});
+window.addEventListener('keydown', function(e) {
+  // Block Ctrl+S, Ctrl+U, Ctrl+Shift+I, F12, Ctrl+P
+  if ((e.ctrlKey && (e.key === 's' || e.key === 'u' || e.key === 'p')) ||
+      (e.ctrlKey && e.shiftKey && e.key.toLowerCase() === 'i') ||
+      e.key === 'F12') {
+    e.preventDefault();
+    e.stopPropagation();
+    return false;
+  }
+});
+</script>
 </body>
 </html>
