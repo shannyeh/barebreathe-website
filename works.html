@@ -26,7 +26,7 @@
                 <span></span>
                 <nav class="navigation" id="mainNav">
                     <ul>
-                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="#" id="contactMenuBtn">Contact</a></li>
                         <li><a href="projects.html">Projects</a></li>
                         <li><a href="works.html" class="active">Works</a></li>
                         <li><a href="intro.html">Intro</a></li>
@@ -290,6 +290,42 @@ window.addEventListener('keydown', function(e) {
     return false;
   }
 });
+</script>
+<!-- Contact Modal -->
+<div id="contactModal" style="display:none;position:fixed;z-index:9999;top:0;left:0;width:100vw;height:100vh;background:rgba(30,32,40,0.57);backdrop-filter:blur(2px);align-items:center;justify-content:center;">
+  <div style="background:#fff;color:#232323;padding:2.2em 2.5em 2em 2.5em;border-radius:16px;box-shadow:0 8px 32px rgba(0,0,0,0.18);max-width:90vw;min-width:280px;max-width:400px;position:relative;font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">
+    <button id="closeContactModal" aria-label="關閉" style="position:absolute;top:12px;right:14px;background:none;border:none;font-size:1.5em;cursor:pointer;color:#888;">&times;</button>
+    <h2 style="font-size:1.2em;font-weight:600;margin-bottom:1.2em;letter-spacing:0.02em;font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">Contact</h2>
+    <ul style="list-style:none;padding:0;margin:0;line-height:2;font-size:1.15em;">
+      <li><strong style="font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">Email:</strong> <a href="mailto:shan811225@gmail.com" style="color:#2a5db0;word-break:break-all;font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">shan811225@gmail.com</a></li>
+      <li><strong style="font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">LinkedIn:</strong> <a href="https://www.linkedin.com/in/shannonyeh/" target="_blank" style="color:#2a5db0;font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">linkedin.com/in/shannonyeh</a></li>
+      <li><strong style="font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">LINE:</strong> <span style="color:#008a00;font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">shanysyeh</span></li>
+      <li><strong style="font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">Discord:</strong> <span style="color:#5865F2;font-family:'DIN Condensed','DIN Condensed',Calibri,sans-serif;">shanbreathe</span></li>
+    </ul>
+  </div>
+</div>
+<script>
+const contactBtn = document.getElementById('contactMenuBtn');
+const contactModal = document.getElementById('contactModal');
+const closeContact = document.getElementById('closeContactModal');
+if(contactBtn && contactModal && closeContact){
+  contactBtn.addEventListener('click', function(e){
+    e.preventDefault();
+    contactModal.style.display = 'flex';
+    setTimeout(()=>{contactModal.querySelector('a,button,span').focus();}, 100);
+  });
+  closeContact.addEventListener('click', function(){
+    contactModal.style.display = 'none';
+  });
+  contactModal.addEventListener('click', function(e){
+    if(e.target === contactModal){ contactModal.style.display = 'none'; }
+  });
+  document.addEventListener('keydown', function(e){
+    if(contactModal.style.display === 'flex' && (e.key === 'Escape' || e.key === 'Esc')){
+      contactModal.style.display = 'none';
+    }
+  });
+}
 </script>
 </body>
 </html>
